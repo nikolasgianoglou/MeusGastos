@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17CC8F1E28347D26001E9AFE /* LabelDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CC8F1D28347D26001E9AFE /* LabelDefault.swift */; };
+		17CC8F2028347FDB001E9AFE /* TextFieldDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CC8F1F28347FDB001E9AFE /* TextFieldDefault.swift */; };
+		17CC8F222834819C001E9AFE /* ButtonDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CC8F212834819C001E9AFE /* ButtonDefault.swift */; };
+		17CC8F242834875F001E9AFE /* ViewControllerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CC8F232834875F001E9AFE /* ViewControllerDefault.swift */; };
 		F85E0A652825B7340005D4BF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E0A642825B7330005D4BF /* LoginView.swift */; };
 		F8EB1A582822E31B009CE46F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB1A572822E31B009CE46F /* AppDelegate.swift */; };
 		F8EB1A5A2822E31B009CE46F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB1A592822E31B009CE46F /* SceneDelegate.swift */; };
@@ -38,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17CC8F1D28347D26001E9AFE /* LabelDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelDefault.swift; sourceTree = "<group>"; };
+		17CC8F1F28347FDB001E9AFE /* TextFieldDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDefault.swift; sourceTree = "<group>"; };
+		17CC8F212834819C001E9AFE /* ButtonDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDefault.swift; sourceTree = "<group>"; };
+		17CC8F232834875F001E9AFE /* ViewControllerDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDefault.swift; sourceTree = "<group>"; };
 		F85E0A642825B7330005D4BF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F8EB1A542822E31B009CE46F /* MeusGastos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeusGastos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8EB1A572822E31B009CE46F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +88,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17CC8F1B28347D02001E9AFE /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				17CC8F1C28347D0F001E9AFE /* Components */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		17CC8F1C28347D0F001E9AFE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				17CC8F1D28347D26001E9AFE /* LabelDefault.swift */,
+				17CC8F1F28347FDB001E9AFE /* TextFieldDefault.swift */,
+				17CC8F212834819C001E9AFE /* ButtonDefault.swift */,
+				17CC8F232834875F001E9AFE /* ViewControllerDefault.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		F8EB1A4B2822E31B009CE46F = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +160,7 @@
 		F8EB1A872822F53F009CE46F /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				17CC8F1B28347D02001E9AFE /* Infrastructure */,
 				F8EB1A882822F550009CE46F /* Coordinator */,
 				F8EB1A892822F563009CE46F /* ViewControllers */,
 			);
@@ -296,11 +324,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F85E0A652825B7340005D4BF /* LoginView.swift in Sources */,
+				17CC8F222834819C001E9AFE /* ButtonDefault.swift in Sources */,
+				17CC8F242834875F001E9AFE /* ViewControllerDefault.swift in Sources */,
 				F8EB1A582822E31B009CE46F /* AppDelegate.swift in Sources */,
 				F8EB1A5A2822E31B009CE46F /* SceneDelegate.swift in Sources */,
 				F8EB1A8E2822F652009CE46F /* LoginCoordinator.swift in Sources */,
 				F8EB1A912822F748009CE46F /* LoginViewController.swift in Sources */,
+				17CC8F1E28347D26001E9AFE /* LabelDefault.swift in Sources */,
 				F8EB1A8C2822F5A5009CE46F /* Coordinator.swift in Sources */,
+				17CC8F2028347FDB001E9AFE /* TextFieldDefault.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

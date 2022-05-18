@@ -9,62 +9,26 @@
 import UIKit
 
 class LoginView: UIView{
-  //MARK: - Visual Elements
+  
+//    let titleLabel: LabelDefault = {
+//        let lb = LabelDefault(text: "Login")
+//        lb.font = UIFont.systemFont(ofSize: 25, weight: .semibold)
+//        return lb
+//    }()
     
-  let titleLabel: UILabel = {
-    let lb = UILabel()
-    lb.text = "Login"
-    lb.translatesAutoresizingMaskIntoConstraints = false
-    lb.font = UIFont.systemFont(ofSize: 25, weight: .semibold)
-    return lb
-  }()
+  //MARK: - LabelDefault
+  let titleLabel = LabelDefault(text: "Login", font: UIFont.systemFont(ofSize: 25, weight: .semibold))
+  let emailLabel = LabelDefault(text: "Email")
+  let passwordLabel = LabelDefault(text: "Senha")
   
+  //MARK: - TextFieldDefault
+  let emailTextField = TextFieldDefault(placeholder: "Informe seu email", keyboardType: .emailAddress)
+  let passwordTextField = TextFieldDefault(placeholder:  "Informe sua senha", isSecureTextentry: true)
   
-  let emailLabel: UILabel = {
-    let lb = UILabel()
-    lb.text = "Email"
-    lb.translatesAutoresizingMaskIntoConstraints = false
-    return lb
-  }()
-  
-  let emailTextField: UITextField = {
-    let tf = UITextField()
-    tf.translatesAutoresizingMaskIntoConstraints = false
-    tf.layer.borderColor = UIColor.black.cgColor
-    tf.layer.borderWidth = 1
-    tf.layer.cornerRadius = 5
-    tf.backgroundColor = .systemGroupedBackground
-    tf.placeholder = "Informe seu email"
-    return tf
-  }()
-  
-  let passwordLabel: UILabel = {
-    let lb = UILabel()
-    lb.text = "Senha"
-    lb.translatesAutoresizingMaskIntoConstraints = false
-    return lb
-  }()
-  
-  let passwordTextField: UITextField = {
-    let tf = UITextField()
-    tf.translatesAutoresizingMaskIntoConstraints = false
-    tf.layer.borderColor = UIColor.black.cgColor
-    tf.layer.borderWidth = 1
-    tf.layer.cornerRadius = 5
-    tf.backgroundColor = .systemGroupedBackground
-    tf.placeholder = "Informe sua senha"
-    tf.isSecureTextEntry = true
-    return tf
-  }()
-  
-  let loginButton: UIButton = {
-    let bt = UIButton()
-    bt.translatesAutoresizingMaskIntoConstraints = false
-    bt.setTitle("Entrar", for: .normal)
-    bt.backgroundColor = .gray
-    bt.layer.cornerRadius = 5
-    return bt
-  }()
+  //MARK: - buttonDefault
+  let loginButton = ButtonDefault(title: "Entrar")
+    
+  let registerButton = ButtonDefault(title: "Registrar")
   //MARK: - Inits
   
   override init(frame: CGRect) {
@@ -81,6 +45,7 @@ class LoginView: UIView{
     setEmail()
     setPassword()
     setLoginButton()
+    setRegisterButton()
 
   }
   
@@ -135,4 +100,12 @@ class LoginView: UIView{
     ])
   }
   
+    private func setRegisterButton(){
+        self.addSubview(registerButton)
+        NSLayoutConstraint.activate([
+        registerButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 15),
+        registerButton.widthAnchor.constraint(equalToConstant: 100),
+        registerButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+        ])
+    }
 }
